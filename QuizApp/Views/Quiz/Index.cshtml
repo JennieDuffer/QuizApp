@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Quiz>
+
+<h2>Quiz</h2>
+
+   <div style="display: block">
+     <a href="/Quiz/InsertQuizInfo/">Create a New Question</a>
+ </div>
+
+<table class="table">
+    <tr>
+        <th>QuestionNumber</th>
+        <th>Questions</th>
+        <th>Answers</th>
+        <th>WrongAnswers</th>
+       
+    </tr>
+
+    @foreach (var quiz in @Model)
+    {
+        <tr>
+            <td><a href=/Quiz/ViewQuizInfo/@quiz.QuestionNumber>@quiz.QuestionNumber</a></td>
+            <td>@quiz.Questions</td>
+            <td>@quiz.Answers</td>
+            <td>@quiz.WrongAnswers</td>
+            
+        </tr>
+    }
+
+</table>
+<div b-hrus2tav5w="" class="container">
+            © 2022 - QuizApp - <a href="/Home/Privacy">Privacy</a>
+        </div>

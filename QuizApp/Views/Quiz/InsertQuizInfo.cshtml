@@ -1,0 +1,21 @@
+﻿
+@model Quiz
+
+<h2>Create a New Question</h2>
+
+@using (Html.BeginForm("InsertQuizInfoToDatabase", "Quiz", "Post"))
+{
+    <input asp-for="QuestionNumber" type="hidden" value="" />
+
+    <label asp-for="Questions" class="control-label">Questions</label>
+    <input type="text" name="Questions" class="form-control" value="" />
+
+    <label asp-for="Answers" class="control-label">Answers</label>
+    <input type="text" name="Answers" class="form-control" />
+
+    <label asp-for="WrongAnswers" class="control-label">WrongAnswers</label>
+    <input type="text" name="WrongAnswers" class="form-control" />
+
+    
+    <input type="submit" value="Create Question" class="btn btn-primary" />
+}
